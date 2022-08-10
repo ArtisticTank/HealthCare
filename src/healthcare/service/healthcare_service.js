@@ -3,6 +3,11 @@ const { riskCategory, bmiCategory } = require("../../constants/constants")
 
 const getPeopleBmiData = () => {
     const bmiData = [];
+    return calculatePeopleBmiData(data)
+}
+
+const calculatePeopleBmiData = (data) => {
+    const bmiData = [];
     data.forEach((item) => {
         item.BMI = (item.WeightKg / ((item.HeightCm / 100) * (item.HeightCm / 100))).toFixed(2)
         for (const key in bmiCategory) {
@@ -21,10 +26,6 @@ const getPeopleBmiData = () => {
     return data
 }
 
-const getOverweightPeopleCount = () => {
-    return data
-}
-
 module.exports = {
-    getPeopleBmiData
+    getPeopleBmiData, calculatePeopleBmiData
 }
