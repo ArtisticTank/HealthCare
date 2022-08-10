@@ -2,6 +2,12 @@
 Calculate the BMI as well as health risk based upon the BMI category
 
 ```
+1. Install node.js 14
+2. Run npm install
+3. Run npm start
+```
+
+```
 POST : calculate and return the BMI index along with the health risks
 
 curl --location --request POST 'http://localhost:3000/calculatePeopleBmiData' \
